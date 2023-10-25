@@ -1,0 +1,65 @@
+@use '../../../../styles/index.module.scss' as *;
+
+.navMenu_item_link{
+    text-decoration: none;
+}
+
+.navMenu_item_text {
+    z-index: 10;
+    ---underlineHeight: 2px;
+    ---color: var(--colors-neutral80);
+    color:var(---color);
+    font-family: var(--fonts-Rift);
+    zoom: 1.001;
+    font-weight: var(--fontWeights-bold);
+    line-height: 1;
+    text-transform: uppercase;
+    text-decoration: none;
+    background-image: linear-gradient(to right, var(---color), var(---color));
+    background-size: 100% var(---underlineHeight);
+    background-position: left bottom;
+    background-origin: content-box;
+    background-repeat: no-repeat;
+    font-size: var(--fontSizes-42);
+
+    @include desktop {
+        ---underlineHeight: 4px;
+        font-size: var(--fontSizes-108);
+    }
+    @include tablet{
+        ---underlineHeight: 3px;
+        font-size: var(--fontSizes-56);
+    }
+    @include desktopWide {
+        ---underlineHeight: 5px;
+        font-size: var(--fontSizes-116);
+    }
+    @media (min-width: 105rem){
+        ---underlineHeight: 6px;
+        font-size: var(--fontSizes-140);
+    }
+}
+
+.navMenu_item_text:hover{
+    color: var(--colors-red);
+    background-image: linear-gradient(to right, var(--colors-red), var(--colors-red))
+}
+
+.navMenu_item_suptext{
+    position: absolute;
+    left: calc(100% + 8px);
+    top: 19%;
+}
+
+.navMenu_item_suptext_content{
+    font-family: var(--fonts-MaisonNeue);
+    z-index: 300;
+    // font-size: 0.75rem;
+    color: var(--colors-neutral40);
+    font-weight: var(--fontWeights-medium);
+    width: max-content;
+    -webkit-text-stroke-width: 0px;
+    @media (min-width: 105em){
+        font-weight: var(--fontWeights-demi);
+    }
+}

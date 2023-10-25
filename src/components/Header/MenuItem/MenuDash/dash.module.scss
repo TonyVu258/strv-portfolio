@@ -1,0 +1,14 @@
+@use '../../../../styles/index.module.scss' as *;
+
+.menu_dash{
+    background-size: 100% 6px;
+    transform-origin: left center;
+    position: relative;
+    content: '';
+    height: 4px;
+    width: 108px;
+    background-image: linear-gradient(to right, var(--colors-neutral40), var(--colors-neutral40));
+    background-position: left center;
+    background-repeat: no-repeat;
+    z-index: 6;
+}
