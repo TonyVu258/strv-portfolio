@@ -1,0 +1,218 @@
+@use '../../../styles/index.module.scss' as *;
+
+.bannerSection{
+    font-size: var(--fontSizes-64);
+    letter-spacing: var(--letterSpacings-1);
+    line-height: 0.95;
+    ---linkUnderlineHeight: 4px;
+    ---textUnderlineOffset: 4px;
+    margin: 0px;
+    color: var(--colors-title);
+    font-family: var(--font-Rift);
+    zoom: 1.001;
+    font-weight: var(--fontWeight-bold);
+    text-transform: uppercase;
+    font-feature-settings: 'tnum';
+
+    @media(min-width: 120em){
+        font-size: var(--fontSizes-240);
+        letter-spacing: var(--letterSpacings-2);
+        line-height: 0.85;
+        ---linkUnderlineHeight: 10px;
+        ---textUnderlineOffset: 10px;
+    }
+
+    @include desktop {
+        font-size: var(--fontSizes-176);
+        letter-spacing: var(--letterSpacings-1);
+        line-height: 0.85;
+        ---linkUnderlineHeight: 8px;
+        ---textUnderlineOffset: 8px;
+    }
+
+    @include tablet{
+        font-size: var(--fontSizes-128);
+        letter-spacing: var(--letterSpacings-1);
+        line-height: 0.85;
+        ---linkUnderlineHeight: 6px;
+        ---textUnderlineOffset: 6px;
+    }
+
+    @include tabletSmall{
+        font-size: var(--fontSizes-72);
+        letter-spacing: var(--letterSpacings-1);
+        line-height: 0.85;
+        ---linkUnderlineHeight: 4px;
+        ---textUnderlineOffset: 4px;
+    }
+
+    @media(min-width: 105em){
+        font-size: var(--fontSizes-208);
+        letter-spacing: var(--letterSpacings-1);
+        line-height: 0.85;
+        ---linkUnderlineHeight: 8px;
+        ---textUnderlineOffset: 8px;
+    }
+}
+
+.bannerWidth{
+    max-width: calc(100vw - 1em);
+    line-height: 0.9;
+    white-space: initial;
+}
+
+.bannerRed{
+    background-size: 100% var(---linkUnderlineHeight);
+    cursor: pointer;
+    color: var(--colors-main);
+    margin-bottom: 0.2em;
+    transition: all 150ms ease 0s;
+    text-decoration: none;
+    display: inline-block;
+    background-image: linear-gradient(to right, currentcolor, currentcolor);
+    background-repeat: no-repeat;
+    background-position: 0.05em bottom;
+    background-origin: border-box;
+    padding-right: 0.008em;
+    line-height: 0.92;
+    @include tablet {
+        line-height: 0.94;
+    }
+    @include desktop {
+        line-height: 0.92;
+    }
+    @media (min-width: 105em){
+        line-height: 0.91;
+    }
+}
+
+.bannerResponsive{
+    @include desktop {
+        display: inline;
+        margin-left: 0.165em;
+    }
+}
+
+.bannerDesktop{
+    display: none;
+    @include desktop {
+        display: inline;
+    }
+}
+
+.bannerMobile{
+    display: inline;
+    @include desktop {
+        display: none;
+    }
+}
+
+.bannerWhite{
+    display: block;
+    white-space: nowrap;
+}
+
+.banner{
+    display: inline-block;
+    margin-left: var(--space-6);
+    margin-right: var(--space-6);
+    @include tablet {
+        margin-left: var(--space-15);
+        margin-right: var(--space-15);
+    }
+}
+
+.bannerVideoSpan{
+    display: inline-block;
+    vertical-align: middle;
+    @media (min-width:105em) {
+        transform: translateY(14px);
+    }
+    @include desktop {
+        vertical-align: super;
+        transform: translateY(4px);
+        margin-right: var(--space-5);
+        margin-left: -0.15em;
+    }
+    @include desktopWide {
+        margin-right: var(--space-9);
+        transform: translateY(8px);
+    }
+}
+
+.bannerFigcaption{
+    width: max-content;
+    display: none;
+    color: var(--colors-neutral40);
+    font-size: var(--fontSizes-13);
+    letter-spacing: var(--letterSpacings-0);
+    font-weight: var(--fontWeight-weight);
+    font-family: var(--font-MaisonNeue);
+    @include tablet {
+        display: block;
+    }
+}
+
+.bannerFigure{
+    display: grid;
+    grid-auto-flow: row;
+    row-gap: var(--space-1);
+}
+
+
+.bannerCover{
+    display: grid;
+    width: 5.5rem;
+    @include tablet{
+        width: 7.375rem;
+    }
+    @include desktopWide{
+        width: 7.875rem;
+    }
+    @media (min-width:105em){
+        width: 9.75rem;
+    }
+}
+
+.bannerBtn{
+    display: inline-block;
+    margin: 0px;
+    padding: 0;
+    border: none;
+    background: transparent;
+    cursor: pointer;
+}
+
+.bannerVideo{
+    width: 100%;
+    height: auto;
+}
+
+.bannerVideoItem {
+    place-items: end;
+    display: grid;
+    position: absolute;
+    inset: 0px;
+    padding: var(--space-2);
+    @media (min-width: 105em){
+        padding: var(--space-3);
+    }
+}
+
+.btnVideo{
+    column-gap: var(--space-5);
+    grid-template-columns: repeat(2, 1fr);
+    align-items: center;
+    display: block;
+}
+
+.btnVideo_relative{
+    position: relative;
+    padding: 0;
+    width: 100%;
+    border: none;
+    background: transparent;
+    @include desktop{
+        grid-column: 1 / span 2;
+    }
+}
