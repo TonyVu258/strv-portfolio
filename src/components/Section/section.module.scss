@@ -16,12 +16,45 @@
     grid-template-rows: auto var(--sizes-headerSmallHeight);
     width: 100%;
     text-align: center;
+    margin: 0;
+    color: var(--colors-title);
+    font-family: var(--fonts-Rift);
+    zoom: 1.001;
+    font-weight: var(--fontWeight-bold);
+    text-transform: uppercase;
+    font-feature-settings: 'tnum';
+    @include tablet {
+        min-height: calc(100vh - var(--sizes-headerMediumHeight));
+        grid-template-rows: auto var(--sizes-headerMediumHeight);
+    }
     @include desktop {
         min-height: calc(100vh - var(--sizes-headerLargeHeight));
         grid-template-rows: auto var(--sizes-headerLargeHeight);
     }
+}
+
+.reelSection{
+    width: 100%;
+    padding: 0 var(--space-5);
+    $space-16: var(--space-16);
+    margin-top: calc(#{$space-16} * -1);
     @include tablet {
-        min-height: calc(100vh - var(--sizes-headerMediumHeight));
-        grid-template-rows: auto var(--sizes-headerMediumHeight);
+        padding: 0 var(--space-10);
+    }
+    @include desktop{
+        padding: 0 var(--space-15);
+    }
+    @include desktopWide{
+        padding: 0 var(--space-20); 
+    }
+}
+
+.aboutSection{
+    color: var(--colors-white);
+    margin-top: var(--space-25);
+    padding: 0 var(--space-5);
+    @include tablet {
+        margin-top: var(--space-42);
+        padding: 0 var(--space-10);
     }
 }

@@ -1,0 +1,59 @@
+@use '../../../styles/index.module.scss' as *;
+
+
+.reelSectionItem{
+    display: block;
+}
+
+.reelVideoBtn{
+    position: relative;
+    padding: 0px;
+    width: 100%;
+    border: none;
+    background: transparent;
+    cursor: pointer;
+    @include desktop {
+        grid-column: 1 / span 2;
+    }
+}
+
+.reelVideo{
+    width: 100%;
+    height: auto;
+}
+
+.reelVideoItem{
+    position: absolute;
+    inset: 0px;
+    padding: var(--space-2);
+    display: grid;
+    place-items: center;
+    @media (min-width: 105em) {
+        padding: var(--space-3); 
+    }
+}
+
+.reelVideoContent{
+    grid-column: 2 / span 1;
+    font-size: var(--fontSizes-12);
+    line-height: 1.5em;
+    white-space: nowrap;
+    margin-top: var(--space-3);
+    color: var(--colors-primary);
+    font-weight: var(--fontWeights-bold);
+    text-transform: uppercase;
+    letter-spacing: var(--letterSpacing-0);
+}
+
+.reelVideoTitle{
+    display: block;
+    color: var(--colors-neutral40);
+    font-weight: var(--fontWeights-medium);
+    white-space: nowrap;
+    @include desktop {
+        color: var(--colors-primary);
+        position: absolute;
+        margin-top: -4rem;
+        margin-left: 2rem;
+    }
+}

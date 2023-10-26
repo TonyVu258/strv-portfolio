@@ -8,7 +8,7 @@ import CopyRight from '../MenuItem/CopyRight';
 
 
 function Navigation({position}) {
-  const [isOpen, setIsOpen] = useState(true);
+  const [isOpen, setIsOpen] = useState(false);
 
   const navOpen = () => {
     setIsOpen(!isOpen);
