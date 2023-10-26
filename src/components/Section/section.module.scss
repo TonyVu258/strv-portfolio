@@ -1,0 +1,27 @@
+@use '../../styles/index.module.scss' as *;
+
+.mainSection{
+    z-index: 300;
+    position: relative;
+    min-height: 100%;
+    background-color: var(--colors-background);
+    transition: var(--transitions-backgroundColor);
+}
+
+.bannerSection{
+    position: relative;
+    display: grid;
+    place-items: center;
+    min-height: calc(100vh - var(--sizes-headerSmallHeight));
+    grid-template-rows: auto var(--sizes-headerSmallHeight);
+    width: 100%;
+    text-align: center;
+    @include desktop {
+        min-height: calc(100vh - var(--sizes-headerLargeHeight));
+        grid-template-rows: auto var(--sizes-headerLargeHeight);
+    }
+    @include tablet {
+        min-height: calc(100vh - var(--sizes-headerMediumHeight));
+        grid-template-rows: auto var(--sizes-headerMediumHeight);
+    }
+}

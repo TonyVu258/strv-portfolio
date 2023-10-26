@@ -189,10 +189,13 @@
 html,body {
   height: 100%
 }
-
+::-webkit-scrollbar {
+  width: 5px;
+}
 html {
-  --scroll-behavior: smooth;
-  scroll-behavior: smooth
+  scroll-behavior: smooth;
+  scrollbar-gutter: stable;
+  scrollbar-width: none;
 }
 
 html,body,div,span,applet,object,iframe,h1,h2,h3,h4,h5,h6,p,blockquote,pre,a,abbr,acronym,address,big,cite,code,del,dfn,em,img,ins,kbd,q,s,samp,small,strike,strong,sub,sup,tt,var,b,u,i,center,dl,dt,dd,ol,ul,li,fieldset,form,label,legend,table,caption,tbody,tfoot,thead,tr,th,td,article,aside,canvas,details,embed,figure,figcaption,footer,header,hgroup,main,menu,nav,output,ruby,section,summary,time,mark,audio,video {
@@ -227,7 +230,8 @@ body {
   font-family: var(--fonts-MaisonNeue);
   font-weight: 500;
   text-rendering: optimizeSpeed;
-  overscroll-behavior-y: none
+  overscroll-behavior-y: none;
+  
 }
 
 body.overflow-hidden {
