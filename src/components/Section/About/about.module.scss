@@ -1,7 +1,240 @@
-@use '../../../styles/index.module.scss' as *;
+@use "../../../styles/index.module.scss" as *;
 
-// aboutSection
+.aboutContent{
+    font-size: var(--fontSizes-18);
+    letter-spacing: var(--letterSpacings-0);
+    font-family: var(--fonts-body);
+    font-weight: var(--fontWeights-medium);
+    line-height: 2;
+    ---linkUnderlineHeight: 1px;
+    ---linkUnderlineOffset: 1px;
+    ---focusedLinkUnderlineHeight: 2px;
+    ---focusedLinkUnderlineOffset: 2px;
+    margin-bottom: var(--space-10);
+    @include tablet{
+        font-size: var(--fontSizes-22);
+        ---linkUnderlineHeight: 2px;
+        ---linkUnderlineOffset: 2px;
+        letter-spacing: var(--letterSpacings-1);
+    }
 
-.aboutWhyUsBtnContent{
+    @include desktopWide{
+        font-size: var(--fontSizes-24);
+        ---linkUnderlineHeight: 2px;
+        ---linkUnderlineOffset: 2px;
+        letter-spacing: var(--letterSpacings-1);
+    }
+
+    @media(min-width: 105em){
+        font-size: var(--fontSizes-28);
+        ---linkUnderlineHeight: 2px;
+        ---linkUnderlineOffset: 2px;
+        letter-spacing: var(--letterSpacings-1);
+    }
+}
+
+.aboutItem_hello{
+    display: inline-block;
+    color: var(--colors-neutral40);
+    text-transform: uppercase;
+    font-size: var(--fontSizes-12);
+    letter-spacing: var(--letterSpacings-0);
+    padding-right: 2.5em;
+    min-width: 6rem;
+    @media (min-width:30em){
+        min-width: 8rem;
+    }
+
+    @include tablet {
+        min-width: 9rem;
+    }
+
+    @media (min-width:105em) {
+        font-size: var(--fontSizes-13);
+    }
+}
+
+.aboutVideoItem{
+    display: block;
+    video{
+        width: 100%;
+        height: auto;
+    }
+}
+
+.aboutVideo{
+    display: grid;
+    place-items: end;
+  position: absolute;
+  inset: 0px;
+  padding: var(--space-2);      
+  @media (min-width: 105em){
+    padding: var(--space-3);
+  }
+}
+
+.aboutItem_red{
+    color: var(--colors-red);
+}
+
+.aboutItem_underline{
+    color: var(--colors-primary);
+    display: inline-block;
+    cursor: pointer;
+    font-size: inherit;
+    font-family: inherit;
+    line-height: inherit;
+    border: none;
+    background: transparent;
+    text-decoration-line: underline;
+    text-decoration-style: initial;
+    text-decoration-color: initial;
+    text-decoration-thickness: var(---linkUnderlineHeight);
+    text-underline-offset: var(---linkUnderlineOffset);
+    ---focusedLinkOutlineOffset: 2px;
+    ---focusedLinkOutlineWidth: 1px;
+}
+
+.aboutItem_sup{
+    display: inline-block;
+    vertical-align: top;
+    font-size: var(--fontSizes-12);
+    font-family: var(--fonts-MaisonNeue);
+    font-weight: var(--fontWeights-medium);
+    color: var(--colors-neutral40);
+    text-transform: uppercase;
+    letter-spacing: -0.01em;
+    @media (min-width:105em){
+        font-size: var(--fontSizes-13);
+    }
+}
+
+.aboutVideoBg{
+    position: relative;
+    padding: 0px;
+    width: 100%;
+    border: none;
+    background: transparent;
+
+}
+
+.aboutVideoSize{
+    display: inline-block;
+    width: 3.125rem;
+    vertical-align: sub;
+    @include tablet{
+        width: 3.625rem;
+    }
+}
+
+.aboutSection{
+    margin: auto;
+    @include desktop {
+        max-width: 47.5rem;
+    }
+    @include desktopWide {
+        max-width: 52.5rem;
+    }
+    @media(min-width: 105em){
+        max-width: 60rem;
+    }
+}
+
+.aboutBtns{
+    display: grid;
+    grid-auto-flow: column;
+    gap: var(--space-5);
+    @include tablet {
+        gap: var(--space-10);
+    }
+    @include desktop{
+        max-width: 27.5rem;
+        gap: var(--space-5);
+    }
+    @include desktopWide {
+        gap: var(--space-10);
+    }
+}
+
+.aboutContactBtn{
+    color: var(--colors-white);
+    background: var(--colors-red);
+    display: inline-block;
+    text-decoration: none;
+    font-size: var(--fontSizes-12);
+    letter-spacing: var(--letterSpacings-0);
+    height: 3rem;
+    min-width: 9.875rem;
+    padding: 0 var(--space-5);
+    border-width: var(--borderWidths-2);
+    border-style: solid;
+    border-color: transparent;
+    font-family: var(--fonts-MaisonNeue);
+    text-transform: uppercase;
+    font-weight: var(--fontWeights-bold);
+    cursor: pointer;
+    @include tablet {
+        font-size: var(--fontSizes-12);
+        letter-spacing: var(--letterSpacings-0);
+    }
+
+    @include desktopWide {
+        height: 3.75rem;
+        min-width: 13.75rem;
+        font-size: var(--fontSizes-13);
+        letter-spacing: var(--letterSpacings-0);
+    }
+}
+
+.aboutContactBtn:hover{
+    background: var(--colors-redHover);
+}
+
+.aboutWhyUsBtn {
+    color: var(--colors-white);
+    background: var(--colors-neutral3);
+    border-color: var(--colors-neutral20);
+    display: inline-block;
+    text-decoration: none;
+    font-size: var(--fontSizes-12);
+    letter-spacing: var(--letterSpacings-0);
+    height: 3rem;
+    min-width: 9.875rem;
+    padding: 0 var(--space-5);
+    border-width: var(--borderWidths-2);
+    border-style: solid;
+    font-family: var(--fonts-MaisonNeue);
+    text-transform: uppercase;
+    font-weight: var(--fontWeights-bold);
+    cursor: pointer;
+
+    @include tablet {
+        font-size: var(--fontSizes-12);
+        letter-spacing: var(--letterSpacings-0);
+    }
+
+    @include desktopWide {
+        height: 3.75rem;
+        min-width: 13.75rem;
+        font-size: var(--fontSizes-13);
+        letter-spacing: var(--letterSpacings-0);
+    }
+}
+
+.aboutWhyUsBtn:hover{
+    background: var(--color-neutral3);
+    border-color: var(--color-neutral40);
+}
+
+.aboutBtnContent {
     display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+}
+
+.aboutBtnSVG {
+    ---rotation: 0deg;
+    transform: rotate(var(---rotation));
 }
