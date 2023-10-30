@@ -1,1 +1,102 @@
 @use '../../../styles/index.module.scss' as *;
+
+.projectSection{
+    display: grid;
+    grid-template-columns: repeat(12, 1fr);
+    row-gap: var(--space-10);
+    column-gap: var(--space-5);
+    margin-top: var(--space-23);
+    @include tablet {
+        row-gap: var(--space-15);
+        column-gap: var(--space-10);
+        margin-top: var(--space-32);
+    }
+    @include desktop{
+        row-gap: var(--space-24);
+        margin-top: var(--space-33);
+    }
+    @include desktopWide {
+        margin-top: var(--space-38);
+    }
+    @media (min-width: 105em){
+        row-gap: var(--space-40);
+    }
+}
+
+.projectBox{
+    display: none;
+    @include tablet {
+        display: block;
+        grid-column: 7 / span 6;
+        margin-bottom: var(--space-32);
+    }
+    @include desktop {
+        grid-column: 9 / span 4;
+        margin-top: var(--space-33);
+        margin-bottom: var(--space-52);
+    }
+    @include desktopWide {
+        margin-top: var(--space-35);
+    }
+}
+
+.projectBoxContent{
+    
+}
+
+.project_img{
+    cursor: none;
+    ---aspect: 1;
+}
+
+.project_img_data{
+    overflow: hidden;
+    position: relative;
+    width: 100%;
+    max-width: 1720px;
+    aspect-ratio: var(---aspect);
+}
+
+.project_1{
+    grid-column: 1 / span 12;
+    @include tablet {
+        grid-area: 1 / 1 / auto / span 6;
+    }
+}
+
+.project_1_link {
+    display: block;
+    text-decoration: none;
+}
+
+.project_img_data1{
+    display: block;
+    width: 100%;
+    object-fit: cover;
+}
+
+.project_img_data2{
+    transition: opacity 500ms ease 0s;
+    opacity: 0;
+    position: absolute;
+    left: -5%;
+    top: -5%;
+    width: 110%;
+    height: 110%;
+    max-width: none;
+    max-height: none;
+    object-fit: cover;
+}
+
+.project_img_data3{
+    opacity: 1;
+    transition: opacity 500ms ease 0s;
+    position: absolute;
+    left: 0px;
+    top: 0px;
+    width: 100%;
+    height: 100%;
+    max-width: none;
+    max-height: none;
+    object-fit: cover;
+}
