@@ -1,0 +1,193 @@
+@use '../../../styles/index.module.scss' as *;
+
+.serviceSection {
+  display: grid;
+  grid-template-columns: repeat(12, 1fr);
+  gap: var(--space-5);
+
+}
+
+.serviceLeftSection {
+  ---offsetVertical: 0;
+  margin-top: calc(var(---offsetVertical) * 1rem);
+  margin-top: 0px;
+  order: 1;
+  grid-column-end: span 12;
+  @include desktop {
+    margin-top: var(--space-75);
+    order: 0;
+    grid-column-end: span 4;
+  }
+  @media (min-width: 105em) {
+    margin-top: var(--space-100);
+  }
+}
+
+.serviceLeftBox {
+  display: inline-block;
+  max-width: 100%;
+  overflow: hidden;
+  position: relative;
+  box-sizing: border-box;
+  margin: 0;
+}
+
+.serviceLeftBoxImg {
+  box-sizing: border-box;
+  display: block;
+  max-width: 100%;
+}
+
+.serviceLeftImg {
+  position: absolute;
+  inset: 0px;
+  box-sizing: border-box;
+  padding: 0px;
+  border: none;
+  margin: auto;
+  display: block;
+  width: 0px;
+  height: 0px;
+  min-width: 100%;
+  max-width: 100%;
+  min-height: 100%;
+  max-height: 100%;
+  filter: none;
+  background-size: cover;
+  background-image: none;
+  background-position: 0% 0%;
+}
+
+.serviceRightSection {
+  ---offsetVertical: 0;
+  margin-top: calc(var(---offsetVertical) * 1rem);
+  margin-bottom: var(--space-32);
+  order: 0;
+  grid-column-start: 1;
+  grid-column-end: span 12;
+  @include desktop {
+    margin-bottom: 0px;
+    order: 1;
+    grid-column-start: 7;
+    grid-column-end: span 6;
+  }
+}
+
+.serviceRightTitle {
+  margin: 0px;
+  color: var(--colors-title);
+  font-family: var(--fonts-Rift);
+  zoom: 1.001;
+  font-weight: var(--fontWeights-bold);
+  text-transform: uppercase;
+  font-feature-settings: 'tnum';
+  margin-bottom: var(--space-5);
+  text-align: center;
+  font-size: var(--fontSizes-60);
+  letter-spacing: var(--letterSpacings-1);
+  line-height: 0.85;
+  ---linkUnderlineHeight: 3px;
+  ---textUnderlineOffset: 4px;
+
+  @include tablet {
+    font-size: var(--fontSizes-116);
+    letter-spacing: var(--letterSpacings-1);
+    line-height: 0.85;
+    ---linkUnderlineHeight: 6px;
+    ---textUnderlineOffset: 6px;
+  }
+  @include desktop {
+    text-align: left;
+    margin-bottom: var(--space-9);
+    font-size: var(--fontSizes-128);
+    letter-spacing: var(--letterSpacings-1);
+    line-height: 0.85;
+    ---linkUnderlineHeight: 6px;
+    ---textUnderlineOffset: 6px;
+  }
+  @include desktopWide {
+    font-size: var(--fontSizes-140);
+    letter-spacing: var(--letterSpacings-1);
+    line-height: 0.85;
+    ---linkUnderlineHeight: 6px;
+    ---textUnderlineOffset: 6px;
+  }
+  @media (min-width: 105em) {
+    margin-bottom: var(--space-13);
+    font-size: var(--fontSizes-168);
+    letter-spacing: var(--letterSpacings-1);
+    line-height: 0.85;
+    ---linkUnderlineHeight: 8px;
+    ---textUnderlineOffset: 8px;
+  }
+}
+
+.serviceRight_content1 {
+  font-family: var(--fonts-body);
+  font-weight: var(--fontWeights-medium);
+  line-height: 2;
+  ---focusedLinkOutlineOffset: 2px;
+  ---focusedLinkOutlineWidth: 2px;
+  margin-bottom: var(--space-5);
+  color: var(--colors-white);
+  font-size: var(--fontSizes-18);
+  ---linkUnderlineHeight: 2px;
+  ---linkUnderlineOffset: 2px;
+  letter-spacing: var(--letterSpacings-0);
+  @include tablet {
+    font-size: var(--fontSizes-22);
+    ---linkUnderlineHeight: 2px;
+    ---linkUnderlineOffset: 2px;
+    letter-spacing: var(--letterSpacings-1);
+  }
+  @include desktopWide {
+    font-size: var(--fontSizes-24);
+    ---linkUnderlineHeight: 2px;
+    ---linkUnderlineOffset: 2px;
+    letter-spacing: var(--letterSpacings-1);
+  }
+  @media (min-width: 105em) {
+    font-size: var(--fontSizes-28);
+    ---linkUnderlineHeight: 2px;
+    ---linkUnderlineOffset: 2px;
+    letter-spacing: var(--letterSpacings-1);
+    margin-bottom: var(--space-13);
+  }
+
+  span:first-child {
+    display: inline-block;
+    color: var(--colors-neutral40);
+    text-transform: uppercase;
+    font-size: var(--fontSizes-12);
+    letter-spacing: var(--letterSpacings-0);
+    padding-right: 2.5em;
+    min-width: 6rem;
+    @media (min-width: 30em) {
+      min-width: 8rem;
+    }
+    @include tablet {
+      min-width: 9rem;
+    }
+    @media (min-width: 105em) {
+      font-size: var(--fontSizes-13);
+    }
+  }
+}
+
+.serviceRight_content2 {
+  font-family: var(--fonts-body);
+  font-weight: var(--fontWeights-medium);
+  line-height: 2;
+  ---linkUnderlineHeight: 1px;
+  ---linkUnderlineOffset: 1px;
+  ---focusedLinkOutlineOffset: 2px;
+  ---focusedLinkOutlineWidth: 2px;
+  margin-bottom: var(--space-6);
+  font-size: var(--fontSizes-14);
+  @media (min-width: 105em) {
+    font-size: var(--fontSizes-16);
+    ---linkUnderlineHeight: 1px;
+    ---linkUnderlineOffset: 2px;
+    margin-bottom: var(--space-9);
+  }
+}

@@ -1,85 +1,132 @@
 @use '../../styles/index.module.scss' as *;
 
-.mainSection{
-    z-index: 300;
-    position: relative;
-    min-height: 100%;
-    background-color: var(--colors-background);
-    transition: var(--transitions-backgroundColor);
+.mainSection {
+  z-index: 300;
+  position: relative;
+  min-height: 100%;
+  background-color: var(--colors-background);
+  transition: var(--transitions-backgroundColor);
 }
 
-.bannerSection{
-    position: relative;
-    display: grid;
-    place-items: center;
-    min-height: calc(100vh - var(--sizes-headerSmallHeight));
-    grid-template-rows: auto var(--sizes-headerSmallHeight);
-    width: 100%;
-    text-align: center;
-    margin: 0;
-    color: var(--colors-title);
-    font-family: var(--fonts-Rift);
-    zoom: 1.001;
-    font-weight: var(--fontWeight-bold);
-    text-transform: uppercase;
-    font-feature-settings: 'tnum';
-    @include tablet {
-        min-height: calc(100vh - var(--sizes-headerMediumHeight));
-        grid-template-rows: auto var(--sizes-headerMediumHeight);
-    }
-    @include desktop {
-        min-height: calc(100vh - var(--sizes-headerLargeHeight));
-        grid-template-rows: auto var(--sizes-headerLargeHeight);
-    }
+.bannerSection {
+  position: relative;
+  display: grid;
+  place-items: center;
+  min-height: calc(100vh - var(--sizes-headerSmallHeight));
+  grid-template-rows: auto var(--sizes-headerSmallHeight);
+  width: 100%;
+  text-align: center;
+  margin: 0;
+  color: var(--colors-title);
+  font-family: var(--fonts-Rift);
+  zoom: 1.001;
+  font-weight: var(--fontWeight-bold);
+  text-transform: uppercase;
+  font-feature-settings: 'tnum';
+  @include tablet {
+    min-height: calc(100vh - var(--sizes-headerMediumHeight));
+    grid-template-rows: auto var(--sizes-headerMediumHeight);
+  }
+  @include desktop {
+    min-height: calc(100vh - var(--sizes-headerLargeHeight));
+    grid-template-rows: auto var(--sizes-headerLargeHeight);
+  }
 }
 
-.reelSection{
-    width: 100%;
-    padding: 0 var(--space-5);
-    $space-16: var(--space-16);
-    margin-top: calc(#{$space-16} * -1);
-    @include tablet {
-        padding: 0 var(--space-10);
-    }
-    @include desktop{
-        padding: 0 var(--space-15);
-    }
-    @include desktopWide{
-        padding: 0 var(--space-20); 
-    }
+.reelSection {
+  width: 100%;
+  padding: 0 var(--space-5);
+  $space-16: var(--space-16);
+  margin-top: calc(#{$space-16} * -1);
+  @include tablet {
+    padding: 0 var(--space-10);
+  }
+  @include desktop {
+    padding: 0 var(--space-15);
+  }
+  @include desktopWide {
+    padding: 0 var(--space-20);
+  }
 }
 
-.aboutSection{
-    color: var(--colors-white);
-    margin-top: var(--space-25);
-    padding: 0 var(--space-5);
-    @include tablet {
-        margin-top: var(--space-42);
-        padding: 0 var(--space-10);
-    }
+.aboutSection {
+  color: var(--colors-white);
+  margin-top: var(--space-25);
+  padding: 0 var(--space-5);
+  @include tablet {
+    margin-top: var(--space-42);
+    padding: 0 var(--space-10);
+  }
 }
 
 .projectSection {
-    margin-bottom: var(--space-24);
-    padding-left: var(--space-5);
-    padding-right: var(--space-5);
-    @include tablet {
-        margin-bottom: var(--space-35);
-        padding-left: var(--space-10);
-        padding-right: var(--space-10);
-    }
+  margin-bottom: var(--space-24);
+  padding-left: var(--space-5);
+  padding-right: var(--space-5);
+  @include tablet {
+    margin-bottom: var(--space-35);
+    padding-left: var(--space-10);
+    padding-right: var(--space-10);
+  }
 
-    @include desktop {
-        padding-left: var(--space-15);
-        padding-right: var(--space-15);
-    }
+  @include desktop {
+    padding-left: var(--space-15);
+    padding-right: var(--space-15);
+  }
 
-    @include desktopWide {
-        margin-bottom: var(--space-40);
-        padding-left: var(--space-20);
-        padding-right: var(--space-20);
-    }
-    @media (min-width: 105em){
-        margin-bottom: var(--space-54);
-    }
+  @include desktopWide {
+    margin-bottom: var(--space-40);
+    padding-left: var(--space-20);
+    padding-right: var(--space-20);
+  }
+  @media (min-width: 105em) {
+    margin-bottom: var(--space-54);
+  }
+}
+
+.serviceSection {
+  padding-left: var(--space-5);
+  padding-right: var(--space-5);
+  @include tablet {
+    margin-top: var(--space-32);
+  }
+  @include desktop {
+    padding-left: var(--space-15);
+    padding-right: var(--space-15);
+  }
+  @include desktopWide {
+    margin-top: var(--space-36);
+    padding-left: var(--space-20);
+    padding-right: var(--space-20);
+  }
+  @media (min-width: 105em) {
+    margin-top: var(--space-50);
+  }
+}
+
+.feedbackSection {
+  margin-top: var(--space-24);
+  margin-bottom: var(--space-25);
+  padding-left: var(--space-5);
+  padding-right: var(--space-5);
+  @include tablet {
+    margin-top: var(--space-32);
+    margin-bottom: var(--space-35);
+    padding-left: var(--space-10);
+    padding-right: var(--space-10);
+  }
+  @include desktop {
+    padding-left: var(--space-15);
+    padding-right: var(--space-15);
+  }
+  @include desktopWide {
+    margin-top: var(--space-36);
+    margin-bottom: var(--space-40);
+    padding-left: var(--space-20);
+    padding-right: var(--space-20);
+  }
+  @media (min-width: 105em) {
+    margin-top: var(--space-50);
+    margin-bottom: var(--space-50);
+  }
 }

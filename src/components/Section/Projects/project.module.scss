@@ -257,3 +257,20 @@
     max-width: 1720px;
     aspect-ratio: 1;
 }
+
+.projectBtns{
+    margin-top: var(--space-20);
+    display: grid;
+    grid-auto-flow: column;
+    gap: var(--space-5);
+    @include tablet {
+        margin-top: var(--space-30);
+        gap: var(--space-10);
+    }
+    @include desktop {
+        justify-content: center;
+    }
+    @include desktopWide {
+        margin-top: var(--space-40);
+    }
+}

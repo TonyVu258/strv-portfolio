@@ -1,0 +1,89 @@
+@use '../../../styles/index.module.scss' as *;
+
+.feedbackSection {
+	display: grid;
+	grid-template-columns: repeat(12, 1fr);
+	gap: var(--space-5);
+}
+
+.feedbackBox {
+	---offsetVertical: 0;
+	margin-top: calc(var(---offsetVertical) * 1rem);
+	grid-column-start: 1;
+	grid-column-end: span 12;
+
+	@include desktop {
+		grid-column-start: 3;
+		grid-column-end: span 8;
+	}
+}
+
+.feedbackSubTitle {
+	margin-bottom: var(--space-8);
+	color: var(--colors-neutral40);
+	font-size: var(--fontSizes-12);
+	text-align: center;
+	text-transform: uppercase;
+
+	@include tablet {
+		margin-bottom: var(--space-15);
+	}
+
+	@media (min-width: 105em) {
+		margin-bottom: var(--space-14);
+		font-size: var(--fontSizes-13);
+		font-weight: var(--fontWeights-demi);
+	}
+}
+
+.feedbackTitleLink {}
+
+.feedbackTitle {
+	margin: 0px;
+	color: var(--colors-title);
+	font-family: var(--fonts-Rift);
+	zoom: 1.001;
+	font-weight: var(--fontWeights-bold);
+	text-transform: uppercase;
+	font-feature-settings: 'tnum';
+	margin-bottom: var(--space-5);
+	text-align: center;
+	font-size: var(--fontSizes-60);
+	letter-spacing: var(--letterSpacings-1);
+	line-height: 0.85;
+	---linkUnderlineHeight: 3px;
+	---textUnderlineOffset: 4px;
+
+	@include tablet {
+		font-size: var(--fontSizes-116);
+		letter-spacing: var(--letterSpacings-1);
+		line-height: 0.85;
+		---linkUnderlineHeight: 6px;
+		---textUnderlineOffset: 6px;
+	}
+
+	@include desktop {
+		margin-bottom: var(--space-7);
+		font-size: var(--fontSizes-128);
+		letter-spacing: var(--letterSpacings-1);
+		line-height: 0.85;
+		---linkUnderlineHeight: 6px;
+		---textUnderlineOffset: 6px;
+	}
+
+	@include desktopWide {
+		font-size: var(--fontSizes-140);
+		letter-spacing: var(--letterSpacings-1);
+		line-height: 0.85;
+		---linkUnderlineHeight: 6px;
+		---textUnderlineOffset: 6px;
+	}
+
+	@media (min-width:105em) {
+		font-size: var(--fontSizes-168);
+		letter-spacing: var(--letterSpacings-1);
+		line-height: 0.85;
+		---linkUnderlineHeight: 8px;
+		---textUnderlineOffset: 8px;
+	}
+}
