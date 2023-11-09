@@ -1,43 +1,94 @@
 @use '../../../../styles/index.module.scss' as *;
 
 
-.copyRight{
-    align-items: center;
-    justify-content: space-between;
-    height: 100%;
-    min-height: 110.5px;
-    width: 100%;
-    padding: 0 calc(var(---flexGap));
-    margin: 0px;
-    display: none;
+.footer {
+    color: var(--colors-primary) !important;
+}
+
+.footerRight a {
+    color: var(--colors-primary) !important;
+}
+
+.footerLeft {
+    margin-top: var(--space-6);
+    display: flex;
+    gap: var(--space-2);
+    font-size: var(--fontSizes-12);
+    color: var(--colors-label);
+    text-align: center;
+    text-transform: uppercase;
+
     @include desktop {
-        display: flex;
-        ---flexGap: var(--space-15);
-    }
-    @include desktopWide{
-        ---flexGap: var(--space-20);
+        margin-top: 0px;
+        flex: 1 1 0px;
+        order: -1;
+        gap: var(--space-8);
+        font-weight: var(--fontWeights-demi);
+        color: var(--colors-primary);
     }
 }
 
-.copyRight_left{
+.footerRight {
+    display: flex;
+    gap: var(--space-2);
+    font-size: var(--fontSizes-12);
+    color: var(--colors-label);
+    text-align: center;
+    text-transform: uppercase;
+
+    @include desktop {
+        order: 3;
+        flex: 1 1 0px;
+        justify-content: flex-end;
+        gap: var(--space-8);
+        font-weight: var(--fontWeights-demi);
+    }
+}
+
+.btnClassName {
+    margin-top: var(--space-6);
+    display: flex;
+    gap: var(--space-2);
+    font-size: var(--fontSizes-12);
+    color: var(--colors-label);
+    text-align: center;
+    text-transform: uppercase;
+
+    @include desktop {
+        margin-top: 0px;
+        flex: 1 1 0px;
+        order: -1;
+        gap: var(--space-8);
+        font-weight: var(--fontWeights-demi);
+        color: var(--colors-primary);
+    }
+}
+
+.navigation {
     color: var(--colors-neutral40);
-    span{
+}
+
+.copyRight_left {
+    color: var(--colors-neutral40);
+
+    span {
         margin-right: var(--space-2);
         font-weight: var(--fontWeights-demi);
         font-size: var(--fontSizes-12);
-        @media (min-width: 105em){
+
+        @media (min-width: 105em) {
             font-size: var(--fontSizes-13);
         }
     }
 }
 
-.copyRight_right{
+.copyRight_right {
     display: grid;
     grid-auto-flow: column;
     gap: var(--space-10)
 }
 
-.copyRight_right_link{
+.copyRight_right_link {
     min-width: max-content;
     ---linkUnderlineOffset: 2px;
     color: var(--colors-neutral40);
@@ -55,12 +106,13 @@
     text-underline-offset: var(---linkUnderlineOffset);
     ---focusedLinkOutlineOffset: 2px;
     ---focusedLinkOutlineWidth: 1px;
-    @media (min-width: 105em){
+
+    @media (min-width: 105em) {
         font-size: var(--fontSizes-13);
     }
 }
 
-.copyRight_right_link:hover{
+.copyRight_right_link:hover {
     color: var(--colors-primary);
     text-decoration: underline;
 }

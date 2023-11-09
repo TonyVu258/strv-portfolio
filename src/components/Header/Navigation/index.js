@@ -95,7 +95,9 @@ function Navigation({position}) {
               <MenuItem index={3}/>
             </div>
             <MenuMobile />
-            <CopyRight />
+            <div className={styles.copyRight}>
+              <CopyRight type='navigation'/>
+            </div>
           </nav>
         </div>
       </div>

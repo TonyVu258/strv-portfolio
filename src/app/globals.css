@@ -256,3 +256,65 @@ button {
   padding-inline: 6px;
   border-image: initial;
 }
+
+
+/* Custom Swiper CSS */
+.swiperSection .swiper-pagination-bullet-active {
+  background: var(--colors-neutral40) !important;
+}
+
+.swiperSection .swiper-pagination-bullet {
+  height: 0.125rem;
+  width: clamp(1rem, 10%, 4rem);
+  border: none;
+  border-radius: unset;
+  background: var(--colors-neutral15);
+  opacity: 1;
+  margin: 0px !important;
+}
+
+.swiperSection .c-ibiPcy .swiper-pagination.swiper-pagination {
+  line-height: 0;
+  bottom: 0px !important;
+}
+
+.swiperSection .swiper-wrapper {
+  padding-bottom: 4px;
+  margin-bottom: var(--space-5);
+  transition-timing-function: ease-out;
+  margin: 0 auto;
+}
+
+.swiperSection .swiper-wrapper .swiper-slide:first-of-type {
+  margin-left: var(--space-5);
+}
+
+@media (min-width: 48em) {
+  .swiperSection .swiper-wrapper {
+    margin-bottom: var(--space-11);
+  }
+  .swiperSection .swiper-wrapper .swiper-slide:first-of-type {
+    margin-left: var(--space-10);
+  }
+}
+
+@media (min-width: 80em) {
+  .swiperSection .swiper-wrapper {
+    margin-bottom: var(--space-15);
+  }
+  .swiperSection .swiper-wrapper .swiper-slide:first-of-type {
+    margin-left: var(--space-15);
+  }
+}
+
+@media (min-width: 90em) {
+  .swiperSection .swiper-wrapper .swiper-slide:first-of-type {
+    margin-left: var(--space-20);
+  }
+}
+
+@media (min-width: 105em) {
+  .swiperSection .swiper-wrapper {
+    margin-bottom: var(--space-20);
+  }
+}

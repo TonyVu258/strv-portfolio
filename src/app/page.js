@@ -1,3 +1,4 @@
+import Footer from "@/components/Footer";
 import Header from "@/components/Header";
 import Layout from "@/components/Layout";
 import Section from "@/components/Section";
@@ -7,18 +8,19 @@ import FeedbackSection from "@/components/Section/Feedback";
 import ProjectSection from "@/components/Section/Projects";
 import ReelSection from "@/components/Section/Reel";
 import ServiceSection from "@/components/Section/Services";
+import SwiperSection from "@/components/Swiper";
 
 export default function Home() {
   return (
     <Layout>
       <Header />
       <Section sectionClass={'mainSection'}>
-        {/* <Section sectionClass={'bannerSection'}>
+        <Section sectionClass={'bannerSection'}>
           <BannerSection />
         </Section>
         <Section sectionClass={'reelSection'} id='reel'>
           <ReelSection />
-        </Section> */}
+        </Section>
         <Section sectionClass={'aboutSection'} id='reel'>
           <AboutSection />
         </Section>
@@ -35,7 +37,9 @@ export default function Home() {
         <Section sectionClass={'feedbackSection'} id='feedback'>
           <FeedbackSection />
         </Section>
+        <SwiperSection />
       </Section>
+      <Footer/>
     </Layout>
   )
 }

@@ -1,0 +1,71 @@
+@use '../../styles/index.module.scss' as *;
+
+.swiper {
+    cursor: grab;
+}
+
+.swiperSlide {
+    margin-right: 80px !important;
+    width: auto !important;
+}
+
+.slideBox{
+    position: relative;
+    max-height: 70vh;
+}
+.slideBg{
+    box-sizing: border-box;
+    max-width: 100%;
+}
+.bgImg{
+    max-width: 100%;
+    display: block;
+    margin: 0px;
+    padding: 0px;
+    border: none;
+}
+.slideImgBox{
+    display: inline-block;
+    max-width: 100%;
+    overflow: hidden;
+    position: relative;
+    box-sizing: border-box;
+    margin: 0px;
+    inset: 0px;
+    position: absolute !important;
+}
+.slideImg{
+    position: absolute;
+    inset: 0px;
+    box-sizing: border-box;
+    padding: 0px;
+    border: none;
+    margin: auto;
+    display: block;
+    width: 0px;
+    height: 0px;
+    min-width: 100%;
+    max-width: 100%;
+    min-height: 100%;
+    max-height: 100%;
+    filter: none;
+    background-size: cover;
+    background-image: none;
+    background-position: 0% 0%;
+}
+
+.slideFigcaption{
+    display: none;
+    @include tablet {
+        display: block;
+    margin: var(--space-4) 0;
+    color: var(--colors-label);
+    font-size: var(--fontSizes-12);
+    text-transform: uppercase;
+    letter-spacing: var(--letterSpacings-0);
+    }
+    @media (min-width: 105em){
+        margin: var(--space-5) 0;
+    font-size: var(--fontSizes-13);
+    }
+}

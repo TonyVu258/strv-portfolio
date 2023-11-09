@@ -1,0 +1,279 @@
+@use '../../styles/index.module.scss' as *;
+
+.footerSVG {
+    ---rotation: 0deg;
+    transform: rotate(var(---rotation));
+    width: 40px;
+    height: 40px;
+    vertical-align: middle;
+
+    @include tablet {
+        height: 68px;
+        width: 68px;
+    }
+
+    @include desktop {
+        height: 80px;
+        width: 80px;
+    }
+
+    @media (min-width:105em) {
+        height: 100px;
+        width: 100px;
+    }
+}
+
+.footerTitleLink {
+    display: inline-block;
+    cursor: pointer;
+    font-size: inherit;
+    font-family: inherit;
+    line-height: inherit;
+    border: none;
+    background: transparent;
+    text-decoration-line: underline;
+    text-decoration-style: initial;
+    text-decoration-color: initial;
+    text-decoration-thickness: var(---linkUnderlineHeight);
+    text-underline-offset: var(---linkUnderlineOffset);
+    ---focusedLinkOutlineOffset: 2px;
+    ---focusedLinkOutlineWidth: 1px;
+    color: var(--colors-red);
+}
+
+.footerTitle {
+    margin: 0px;
+    color: var(--colors-title);
+    font-family: var(--fonts-Rift);
+    zoom: 1.001;
+    font-weight: var(--fontWeights-bold);
+    text-transform: uppercase;
+    font-feature-settings: "tnum";
+    font-size: var(--fontSizes-60);
+    letter-spacing: var(--letterSpacings-1);
+    line-height: 0.85;
+    ---linkUnderlineHeight: 3px;
+    ---textUnderlineOffset: 4px;
+
+    @include tablet {
+        font-size: var(--fontSizes-116);
+        letter-spacing: var(--letterSpacings-1);
+        line-height: 0.85;
+        ---linkUnderlineHeight: 6px;
+        ---textUnderlineOffset: 6px;
+    }
+
+    @include desktop {
+        font-size: var(--fontSizes-128);
+        letter-spacing: var(--letterSpacings-1);
+        line-height: 0.85;
+        ---linkUnderlineHeight: 6px;
+        ---textUnderlineOffset: 6px;
+    }
+
+    @include desktopWide {
+        font-size: var(--fontSizes-140);
+        letter-spacing: var(--letterSpacings-1);
+        line-height: 0.85;
+        ---linkUnderlineHeight: 6px;
+        ---textUnderlineOffset: 6px;
+    }
+
+    @media (min-width: 105em) {
+        font-size: var(--fontSizes-168);
+        letter-spacing: var(--letterSpacings-1);
+        line-height: 0.85;
+        ---linkUnderlineHeight: 6px;
+        ---textUnderlineOffset: 6px;
+    }
+
+    span {
+        display: inline-block;
+        vertical-align: top;
+        font-size: var(--fontSizes-12);
+        font-family: var(--fonts-MaisonNeue);
+        font-weight: var(--fontWeights-medium);
+        color: var(--colors-neutral40);
+        text-transform: uppercase;
+        letter-spacing: -0.01em;
+        transform: translate3d(1.5rem, 0.875rem, 0px);
+
+        @media(min-width: 105em) {
+            font-size: var(--fontSizes-13);
+        }
+    }
+}
+
+.footerBox {
+    margin: 20vh 0px 30vh;
+    text-align: center;
+}
+
+.footerSection {
+    padding: var(--space-5) var(--space-5) var(--space-6) var(--space-5);
+
+    @include tablet {
+        padding: var(--space-10) var(--space-10) var(--space-6) var(--space-10);
+    }
+
+    @include desktop {
+        padding: var(--space-15) var(--space-15) var(--space-9) var(--space-15);
+    }
+
+    @include desktopWide {
+        padding: var(--space-20) var(--space-20) var(--space-11) var(--space-20);
+    }
+}
+
+.footerSubscribe {
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+    gap: 0px;
+
+    @include tablet {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+.subscribeBox {
+    display: grid;
+    place-items: center;
+
+    @include tablet {
+        min-height: 11.25rem;
+        border-right-width: var(--borderWidths-1);
+        border-style: solid;
+        border-color: var(--colors-neutral15);
+    }
+
+    @include desktop {
+        min-height: 18.75rem;
+    }
+
+    @media (min-width: 105em) {
+        min-height: 30rem;
+    }
+}
+
+.subscribeTitle {
+    margin: 0px;
+    color: var(--colors-title);
+    font-family: var(--fonts-Rift);
+    zoom: 1.001;
+    font-weight: var(--fontWeights-bold);
+    text-transform: uppercase;
+    font-feature-settings: "tnum";
+    font-size: var(--fontSizes-24);
+    line-height: 1;
+    ---linkUnderlineHeight: 2px;
+    ---textUnderlineOffset: 2px;
+
+    @include tablet {
+        font-size: var(--fontSizes-28);
+        line-height: 1;
+        ---linkUnderlineHeight: 2px;
+        ---textUnderlineOffset: 2px;
+    }
+
+    @media (min-width: 105em) {
+        font-size: var(--fontSizes-32);
+        line-height: 1;
+        ---linkUnderlineHeight: 3px;
+        ---textUnderlineOffset: 2px;
+    }
+}
+
+.subscribeLink{
+    color: var(--colors-red);
+    display: inline-block;
+    cursor: pointer;
+    font-size: inherit;
+    font-family: inherit;
+    line-height: inherit;
+    border: none;
+    background: transparent;
+    text-decoration-line: underline;
+    text-decoration-style: initial;
+    text-decoration-color: initial;
+    text-decoration-thickness: var(---linkUnderlineHeight);
+    text-underline-offset: var(---linkUnderlineOffset);
+    ---focusedLinkOutlineOffset: 2px;
+    ---focusedLinkOutlineWidth: 1px;
+}
+
+.subscribeIcon{
+    display: inline-block;
+    vertical-align: top;
+    font-size: var(--fontSizes-12);
+    font-family: var(--fonts-MaisonNeue);
+    font-weight: var(--fontWeights-medium);
+    color: var(--colors-neutral40);
+    text-transform: uppercase;
+    letter-spacing: -0.01em;
+    @media(min-width: 105em){
+        font-size: var(--fontSizes-13);
+    }
+}
+
+.subscribeSVG{
+    margin-left: var(--space-1);
+    margin-right: var(--space-1);
+    vertical-align: middle;
+}
+
+.footerNav{
+    margin-top: var(--space-15);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    @include tablet{
+        margin-top: var(--space-20);
+    }
+    @include desktop {
+        gap: var(--space-6);
+        flex-direction: row;
+        justify-content: space-between;
+    }
+}
+
+.btnSVG{
+    ---rotation: -90deg;
+    transform: rotate(var(---rotation));
+    margin-right: var(--space-2);
+}
+
+.btnText{
+    display: flex;
+    align-items: center;
+    // width: 100%;
+    height: 100%;
+    justify-content: center;
+}
+
+
+.backToTopBtn{
+    display: flex;
+    padding: 0 var(--space-5);
+    border-width: var(--borderWidths-2);
+    border-style: solid;
+    border-color: transparent;
+    font-family: var(--fonts-MaisonNeue);
+    text-transform: uppercase;
+    cursor: pointer;
+    font-size: var(--fontSizes-12);
+    letter-spacing: var(--letterSpacings-0);
+    color: var(--colors-primary);
+    font-weight: var(--fontWeights-demi);
+    background: transparent;
+    min-width: auto !important;
+    height: auto !important;
+    @include tablet {
+        min-width: 10.625rem;
+    }
+    @media (min-width:105em){
+        height: 3.75rem;
+        min-width: 13.75rem;
+        letter-spacing: var(--letterSpacings-0);
+        font-size: var(--fontSizes-13);
+    }
+}

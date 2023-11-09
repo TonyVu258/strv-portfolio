@@ -30,7 +30,7 @@ function FeedbackContent ({ date , blockquote , imgAlt, imgSrc, customerName, cu
         </span>
         <div className={styles.feedbackCustomerData}>
             <span className={styles.feedbackCustomerName}>{customerName}</span>
-            <span className={styles.feedbackCustomerName}>{customerTitle}</span>
+            <span className={styles.feedbackCustomerTitle}>{customerTitle}</span>
         </div>
       </div>
       <div className={styles.feedbackRedUnderline} />
