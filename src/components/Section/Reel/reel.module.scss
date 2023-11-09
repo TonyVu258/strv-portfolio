@@ -1,6 +1,5 @@
 @use '../../../styles/index.module.scss' as *;
 
-
 .reelSectionItem{
     display: block;
 }
@@ -31,6 +30,38 @@
     @media (min-width: 105em) {
         padding: var(--space-3); 
     }
+}
+
+.reelPlayBtnBox{
+    margin: 0px;
+    padding: 0px;
+    border-width: var(--borderWidths-2);
+    border-style: solid;
+    border-color: transparent;
+    border-radius: var(--radii-circle);
+    font-family: var(--fonts-MaisonNeue);
+    text-transform: uppercase;
+    font-weight: var(--fontWeights-bold);
+    cursor: pointer;
+    color: var(--colors-black);
+    background: var(--colors-white);
+    height: 3rem;
+    width: 3rem;
+    font-size: var(--fontSizes-12);
+    @include tablet {
+        height: 3.75rem;
+    width: 3.75rem;
+    font-size: var(--fontSizes-13);
+    }
+}
+
+.reelPlayBtn{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: var(--space-1);
 }
 
 .reelVideoContent{

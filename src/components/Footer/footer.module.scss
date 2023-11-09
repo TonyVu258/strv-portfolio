@@ -245,14 +245,13 @@
 .btnText{
     display: flex;
     align-items: center;
-    // width: 100%;
+    width: 100%;
     height: 100%;
     justify-content: center;
 }
 
 
 .backToTopBtn{
-    display: flex;
     padding: 0 var(--space-5);
     border-width: var(--borderWidths-2);
     border-style: solid;
@@ -276,4 +275,9 @@
         letter-spacing: var(--letterSpacings-0);
         font-size: var(--fontSizes-13);
     }
+}
+
+.backToTopBtn:active, .backToTopBtn:hover {
+    border-color: transparent;
+    text-decoration: underline;
 }

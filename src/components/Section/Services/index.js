@@ -21,7 +21,7 @@ function ServiceSection () {
             <Image
               className={styles.serviceLeftImg}
               alt='Backend and Frontend Developers'
-              src='/_next/static/image/src/service_section.jpg'
+              src='/Images/about-strv.jpg'
               height={'750'}
               width={'564'}
               decoding='async'

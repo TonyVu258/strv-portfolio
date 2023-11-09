@@ -1,6 +1,7 @@
 import Footer from "@/components/Footer";
 import Header from "@/components/Header";
 import Layout from "@/components/Layout";
+import MarqueeSection from "@/components/Marquee";
 import Section from "@/components/Section";
 import AboutSection from "@/components/Section/About";
 import BannerSection from "@/components/Section/Banner";
@@ -24,16 +25,14 @@ export default function Home() {
         <Section sectionClass={'aboutSection'} id='reel'>
           <AboutSection />
         </Section>
-        {/* <Section sectionClass={'marqueeSection'} id='technology'>
-        </Section> */}
+        <MarqueeSection />
         <Section sectionClass={'projectSection'} id='projects'>
           <ProjectSection />
         </Section>
         <Section sectionClass={'serviceSection'} id='services'>
           <ServiceSection />
         </Section>
-        {/* <Section sectionClass={'marqueeSection'} id='technology'>
-        </Section> */}
+        <MarqueeSection direction='right' />
         <Section sectionClass={'feedbackSection'} id='feedback'>
           <FeedbackSection />
         </Section>

@@ -1,0 +1,50 @@
+@use '../../styles/index.module.scss' as *;
+
+.marqueeSection{
+    ---duration: 20s;
+    ---delay: 0s;
+    ---direction: normal;
+    position: relative;
+    width: 100%;
+    display: flex;
+    overflow: hidden;
+    white-space: nowrap;
+    margin-top: var(--space-25);
+    margin-bottom: var(--space-25);
+    @include tablet {
+        margin-top: var(--space-32);
+        margin-bottom: var(--space-32);
+    }
+    @include desktopWide {
+        margin-top: var(--space-38);
+        margin-bottom: var(--space-38);
+    }
+    @media (min-width:105em){
+        margin-top: var(--space-47);
+        margin-bottom: var(--space-47);
+    }
+}
+
+.marqueeImage{
+    display: inline-block;
+    vertical-align: middle;
+    color: var(--colors-white);
+    margin-left: var(--space-18);
+    transform: none;
+    @include tablet {
+        margin-left: var(--space-35);
+    }
+    @include desktop {
+        margin-left: var(--space-50);
+    }
+    @media (min-width: 105em) {
+        margin-left: var(--space-61);
+    }
+}
+
+.marqueeBox{
+    position: relative;
+    display: flex;
+    animation-direction: var(---direction);
+    flex: 0 0 auto;
+}
