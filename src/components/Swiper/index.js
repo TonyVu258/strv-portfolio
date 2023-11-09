@@ -74,7 +74,7 @@ function SwiperSection () {
           key={index}
           className={styles.swiperSlide}
           role='group'
-          aria-label={`${index} / 5`}
+          aria-label={`${index+1} / 5`}
         >
           <SlideContent bgSrc={slide.bgSrc} imgSrc={slide.imgSrc} imgAlt={slide.imgAlt} figcaption={slide.figcaption} ratio={slide.ratio}/>
         </SwiperSlide>
