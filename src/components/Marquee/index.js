@@ -2,7 +2,7 @@ import Marquee from "react-fast-marquee";
 import styles from "./marquee.module.scss"
 import MarqueeImage from "./MarqueeImage";
 
-function MarqueeSection( direction = left) {
+function MarqueeSection( direction = 'left') {
     return (
         <Marquee
             speed={180}
