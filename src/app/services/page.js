@@ -1,24 +1,20 @@
 import Button from '@/components/Button'
-import Filter from '@/components/Filter'
-import FilterProject from '@/components/Filter/FilterProject'
 import Footer from '@/components/Footer'
 import Header from '@/components/Header'
 import Layout from '@/components/Layout'
 import Section from '@/components/Section'
-import WorkBanner from '@/components/Section/Banner/WorkBanner'
+import ServiceBanner from '@/components/Section/Banner/ServiceBanner'
+import ServiceDetail from '@/components/Section/Services/ServiceDetail'
+import Services from '@/components/Section/Services/Services'
 
 function OurWork() {
   return (
     <Layout>
         <Header />
         <Section sectionClass={'mainSection'}>
-            <Section sectionClass={'workSection'}>
-                <WorkBanner />
-            </Section>
-            <Filter />
-            <Section sectionClass={'filterProjectSection'}>
-              <FilterProject />
-            </Section>
+            <ServiceBanner />
+            <Services />
+            {/* <ServiceDetail id={'123'} dataImage1={''} dataImage2={''} dataImage3={''} imgAlt={''} title={''} subtitle={''} project={''} projectLink={''} ratio={''} /> */}
             <Button type={'red'} onClick={'showMore'} content={'load more projects'}/>
         </Section>
         <Footer subscribe={false}/>

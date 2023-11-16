@@ -4,9 +4,9 @@ function WorkBanner() {
     return (
         <>
             <span className={styles.workBanner}>
-                <span className={styles.workBannerBox}>
-                    <span className={styles.workBannerText}>
-                        <span className={styles.workBannerData}>
+                <span className={styles.bannerBox}>
+                    <span className={styles.bannerText}>
+                        <span className={styles.bannerData}>
                             Our Work&nbsp;
                             <span className={styles.workImgBox}>
                                 <svg width="23" height="96" viewBox="0 0 23 96" fill="none" xmlns="http://www.w3.org/2000/svg" className={styles.workSVG}><path d="M22.1538 92.6733C11.1716 79.7465 5.68047 64.9188 5.68047 48.095c0-9.4099 1.60947-17.9643 4.82843-25.4732 3.3136-7.5089 7.1952-13.97229 11.6449-19.29506L17.8935 0C5.9645 14.5426 0 30.5109 0 48.095 0 65.4891 5.9645 81.4574 17.8935 96l4.2603-3.3267Z" fill="currentColor"></path></svg>
@@ -24,8 +24,8 @@ function WorkBanner() {
                     </span>
                     <span className={styles.workBannerTextClear}>
                         <br />
-                        <span className={styles.workBannerText}>
-                            <span className={styles.workBannerData}>
+                        <span className={styles.bannerText}>
+                            <span className={styles.bannerData}>
                                 <span className={styles.textClear}>
                                     &amp; Partnerships
                                 </span>

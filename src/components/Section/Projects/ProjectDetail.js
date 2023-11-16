@@ -2,7 +2,6 @@ import Link from "next/link";
 import styles from "./project.module.scss";
 
 function ProjectDetail({
-  index,
   dataImage1,
   dataImage2,
   dataImage3,
@@ -10,16 +9,18 @@ function ProjectDetail({
   title,
   subtitle,
   projectLink,
+  project,
+  ratio = ''
 }) {
   return (
-    <div className={styles[`project_${index}`]}> {/* Use dynamic class name */}
+    <div className={styles[`project_${project}`]} style={ratio ? {'aspectRatio': `${ratio}`}: null}> 
       <figure>
         <Link href={projectLink ? projectLink : "/"} className={styles.project_link}>
           <div className={styles.project_img}>
-            <div className={styles[`project_img_${index}_data`]}>
-              <img src={dataImage1} aria-hidden="true" alt="" className={styles.project_img_data1}/>
-              <img aria-hidden="true" alt="" src={dataImage2} className={styles.project_img_data2}/>
-              <img src={dataImage3} alt={imgAlt} className={styles.project_img_data3}/>
+            <div className={styles[`project_${project}_data`]}>
+              <img src={dataImage1} aria-hidden="true" alt="" className={styles.project_img_1}/>
+              <img aria-hidden="true" alt="" src={dataImage2} className={styles.project_img_2}/>
+              <img src={dataImage3} alt={imgAlt} className={styles.project_img_3}/>
             </div>
           </div>
         </Link>

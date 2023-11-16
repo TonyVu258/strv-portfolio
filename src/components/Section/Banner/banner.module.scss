@@ -7,10 +7,10 @@
     ---linkUnderlineHeight: 4px;
     ---textUnderlineOffset: 4px;
     margin: 0px;
-    color: var(--colors-title);
-    font-family: var(--font-Rift);
+    color: var(--colors-title) !important;
+    font-family: var(--fonts-Rift) !important;
     zoom: 1.001;
-    font-weight: var(--fontWeight-bold);
+    font-weight: var(--fontWeights-bold);
     text-transform: uppercase;
     font-feature-settings: 'tnum';
 
@@ -53,6 +53,11 @@
         ---linkUnderlineHeight: 8px;
         ---textUnderlineOffset: 8px;
     }
+}
+
+.bannerDataMobile, .bannerDataDesktop{
+    letter-spacing: normal;
+    zoom: 1.001;
 }
 
 .bannerWidth {
@@ -232,16 +237,24 @@
     }
 }
 
-.workBannerBox {
+.workBannerTextClear{
+    display: none;
+    @include tablet {
+        display: inline;
+    }
+}
+
+.bannerBox {
+    opacity: 1;
     white-space: nowrap;
 }
 
-.workBannerText {
+.bannerText {
     overflow: hidden;
     display: inline-block;
 }
 
-.workBannerData {
+.bannerData {
     display: inline-block;
 }
 

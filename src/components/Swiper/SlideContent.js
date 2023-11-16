@@ -1,6 +1,6 @@
 import styles from './swiper.module.scss'
 
-function SlideContent({ bgSrc, imgAlt, imgSrc, figcaption, ratio}) {
+function SlideContent({ bgSrc, imgAlt, imgSrc, figcaption, ratio = ''}) {
   return (
     <figure>
         <div className={styles.slideBox} style={{'aspectRatio': `${ratio}`}}>

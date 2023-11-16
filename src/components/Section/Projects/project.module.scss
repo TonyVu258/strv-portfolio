@@ -82,7 +82,7 @@
     cursor: none;
 }
 
-.project_img_1_data {
+.project_barry_data {
     overflow: hidden;
     position: relative;
     width: 100%;
@@ -90,7 +90,7 @@
     aspect-ratio: 1;
 }
 
-.project_1 {
+.project_barry {
     grid-column: 1 / span 12;
 
     @include tablet {
@@ -103,13 +103,13 @@
     text-decoration: none;
 }
 
-.project_img_data1 {
+.project_img_1 {
     display: block;
     width: 100%;
     object-fit: cover;
 }
 
-.project_img_data2 {
+.project_img_2 {
     transition: opacity 500ms ease 0s;
     opacity: 0;
     position: absolute;
@@ -122,7 +122,7 @@
     object-fit: cover;
 }
 
-.project_img_data3 {
+.project_img_3 {
     opacity: 1;
     transition: opacity 500ms ease 0s;
     position: absolute;
@@ -194,9 +194,8 @@
     }
 }
 
-.project_2 {
+.project_athletic {
     grid-column: 1 / span 12;
-
     @include tablet {
         grid-column: 7 / span 6;
         margin-top: -18.75rem;
@@ -213,7 +212,20 @@
     }
 }
 
-.project_img_2_data {
+.project_athletic_work {
+    grid-column: 1 / span 12;
+    @include tablet {
+        grid-column: 7 / span 6;
+        padding-top: 50%;
+    }
+
+    @include desktop {
+        grid-column: 9 / span 4;
+    }
+}
+
+.project_athletic_data, 
+.project_athletic_work_data {
     overflow: hidden;
     position: relative;
     width: 100%;
@@ -221,7 +233,7 @@
     aspect-ratio: 0.75;
 }
 
-.project_3 {
+.project_barnes, .project_barnes_work {
     grid-column: 1 / span 12;
 
     @include tablet {
@@ -229,7 +241,7 @@
     }
 }
 
-.project_img_3_data {
+.project_barnes_data {
     overflow: hidden;
     position: relative;
     width: 100%;
@@ -237,7 +249,16 @@
     aspect-ratio: 1.7788461538461537;
 }
 
-.project_4 {
+.project_barnes_work_data{
+    overflow: hidden;
+    position: relative;
+    width: 100%;
+    max-width: 1720px;
+    // aspect-ratio: 1.7788461538461537;
+    margin-top: -30%;
+}
+
+.project_microsoft {
     grid-column: 1 / span 12;
 
     @include tablet {
@@ -250,7 +271,7 @@
     }
 }
 
-.project_img_4_data {
+.project_microsoft_data {
     overflow: hidden;
     position: relative;
     width: 100%;
@@ -273,4 +294,19 @@
     @include desktopWide {
         margin-top: var(--space-40);
     }
+}
+
+.project_pump {
+    grid-column: 1 / span 12;
+    @include tablet {
+        grid-column: 1 / span 6;
+    }
+}
+
+.project_pump_data {
+    // aspect-ratio: var(---aspect);
+    overflow: hidden;
+    position: relative;
+    width: 100%;
+    max-width: 3520px;
 }

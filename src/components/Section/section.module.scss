@@ -148,7 +148,7 @@
 }
 
 
-.workSection {
+.workSection, .serviceBannerSection {
   position: relative;
   display: grid;
   place-items: center;
@@ -165,5 +165,30 @@
   @include desktop {
     min-height: calc(100vh - var(--sizes-headerLargeHeight));
     grid-template-rows: auto var(--sizes-headerLargeHeight);
+  }
+}
+
+.filterProjectSection, .servicesSection {
+  margin: 0;
+  padding: 0 var(--space-5);
+
+  @include tablet {
+    margin: var(--space-32) 0;
+    padding: 0 var(--space-10);
+  }
+
+  @include desktop {
+    margin: var(--space-32) 0;
+    padding: 0 var(--space-15);
+  }
+
+  @include desktopWide {
+    margin: var(--space-36) 0;
+    padding: 0 var(--space-20);
+  }
+
+  @media (min-width: 105em) {
+    margin: var(--space-50) 0;
+    padding: 0 var(--space-20);
   }
 }
